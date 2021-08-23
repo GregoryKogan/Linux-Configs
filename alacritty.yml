@@ -1,8 +1,8 @@
 # ======================================
-# Alacrity terminal emualator config
-# location: ~/.config/alacrity
+# Alacritty terminal emualator config
+# location: ~/.config/alacritty
 # Dependencies:
-# 	- Dracula theme for Alacrity 
+# 	- Dracula theme for Alacritty 
 #	(location: /home/gregory/Applications/DraculaAlacritty/alacritty-master/dracula.yml)
 # ======================================
 
