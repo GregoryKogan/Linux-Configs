@@ -2,8 +2,8 @@
 # Alacritty terminal emualator config
 # location: ~/.config/alacritty
 # Dependencies:
-# 	- Dracula theme for Alacritty 
-#	(location: /home/gregory/Applications/DraculaAlacritty/alacritty-master/dracula.yml)
+#   - Dracula theme for Alacritty 
+# (location: /home/gregory/Applications/DraculaAlacritty/alacritty-master/dracula.yml)
 # ======================================
 
 
@@ -18,7 +18,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - /home/gregory/Applications/DraculaAlacritty/alacritty-master/dracula.yml
+  - /home/gregorykogan/Applications/DraculaAlacritty/alacritty-master/dracula.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -165,7 +165,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -435,8 +435,8 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+  program: /usr/bin/fish
 #  args:
 #    - --login
 

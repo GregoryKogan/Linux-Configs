@@ -35,7 +35,7 @@ function mod_fish_config
 	if test $argv
 		sudo $argv ~/.config/fish/config.fish
 	else
-		obg sudo gedit ~/.config/fish/config.fish
+		obgl sudo subl ~/.config/fish/config.fish
 	end
 end
 
@@ -44,7 +44,7 @@ function mod_starship_config
 	if test $argv
 		sudo $argv ~/.config/starship.toml
 	else
-		obg sudo gedit ~/.config/starship.toml
+		obgl sudo subl ~/.config/starship.toml
 	end
 end
 
@@ -53,14 +53,20 @@ function mod_alacritty_config
 	if test $argv
 		sudo $argv ~/.config/alacritty/alacritty.yml
 	else
-		obg sudo gedit ~/.config/alacritty/alacritty.yml
+		obgl sudo subl ~/.config/alacritty/alacritty.yml
 	end
 end
 
-# Open app in backgroud without printing logs to terminal
+# Open app in backgroud without printing any logs to terminal
 function obg
 	echo "$argv &> /dev/null&"
 	$argv &> /dev/null&;
+end
+
+# Open app in backgroud without printing app logs to terminal
+function obgl
+	echo "$argv &> /dev/null"
+	$argv &> /dev/null;
 end
 
 # Create working files and open them in VSCode
@@ -70,7 +76,7 @@ function work_start
 	cd work/
 	touch PythonSource.py
 	touch CppSource.cpp
-	code .
+	subl .
 	cd ~/
 end
 
@@ -79,7 +85,7 @@ function work_done
 	cd ~/'Рабочий стол/'
 	rm -rf work
 	cd ~/
-	pkill code
+	pkill subl
 end
 
 # cd to work directory created in 'work_start'
@@ -90,12 +96,12 @@ end
 # Open MW-Insider project located in ~/Work/
 function mw_start
 	cd ~/Work/MW-Insider/Backend;
-	obg pycharm-community .;
+	obg pycharm .
 	cd ../mobile_app;
-	obg android-studio .;
+	obg android-studio .
 	cd ..
-	clear;
-	git status;
+	clear
+	git status
 end
 
 # Close MW-Insider project located in ~/Work/
@@ -106,4 +112,3 @@ function mw_done
 	cd;
 	clear;
 end
-
