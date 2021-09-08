@@ -21,4 +21,8 @@ echo "Collecting Alacritty config"
 sudo cp ~/.config/alacritty/alacritty.yml "$curpath/configs/"
 
 
+# Qtile
+echo "Collecting Qtile config"
+sudo cp -r ~/.config/qtile "$curpath/configs/qtile"
+
 sudo rm curpath.txt;
