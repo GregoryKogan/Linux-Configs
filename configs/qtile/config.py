@@ -98,7 +98,7 @@ mod = "mod4"  # mod key = super
 ALT = "mod1"
 terminal = guess_terminal()
 browser = "firefox"
-file_manager = "dolphin"
+file_manager = "pcmanfm"
 volume_app = 'pavucontrol'
 icon_folder = '~/.config/qtile/icons'
 wlan_interface = 'wlp2s0'
