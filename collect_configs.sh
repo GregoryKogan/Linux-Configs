@@ -20,9 +20,12 @@ sudo cp ~/.config/starship.toml "$curpath/configs/"
 echo "Collecting Alacritty config"
 sudo cp ~/.config/alacritty/alacritty.yml "$curpath/configs/"
 
-
 # Qtile
 echo "Collecting Qtile config"
+sudo cp ~/.config/xournalpp/toolbar.ini "$curpath/configs/"
+
+# Xournal++
+echo "Collecting Xournal++ config"
 sudo cp -r ~/.config/qtile "$curpath/configs/"
 
 sudo rm curpath.txt;
