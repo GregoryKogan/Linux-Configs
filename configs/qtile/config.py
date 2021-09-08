@@ -188,16 +188,13 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layouts = [
     layout.MonadTall(
-        border_focus_stack=ui_theme['border_focus'],
         border_focus=ui_theme['border_focus'],
         border_normal=ui_theme['border_normal'],
-        border_normal_stack=ui_theme['border_normal'],
         ratio=0.55,
-        border_on_single=False,
         border_width=2,
         margin=4,
-        margin_on_single=0,
         grow_amount=5,
+        single_border_width=0,
     ),
     layout.Max(
         border_focus_stack=ui_theme['border_focus'],
@@ -218,7 +215,6 @@ layouts = [
     #     grow_amount=5,
     #     num_columns=2,
     #     fair=False,
-
     # ),
     # layout.Floating(
     #     border_focus=ui_theme['border_focus'],
@@ -486,5 +482,3 @@ auto_minimize = True
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
-
-
