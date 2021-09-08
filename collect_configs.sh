@@ -23,6 +23,6 @@ sudo cp ~/.config/alacritty/alacritty.yml "$curpath/configs/"
 
 # Qtile
 echo "Collecting Qtile config"
-sudo cp -r ~/.config/qtile "$curpath/configs/qtile"
+sudo cp -r ~/.config/qtile "$curpath/configs/"
 
 sudo rm curpath.txt;
