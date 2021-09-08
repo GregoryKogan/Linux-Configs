@@ -57,6 +57,24 @@ function mod_alacritty_config
 	end
 end
 
+# Go to Qtile wm config
+function mod_qtile_config
+	if test $argv
+		sudo $argv ~/.config/qtile/config.py
+	else
+		obgl sudo subl ~/.config/qtile/config.py
+	end
+end
+
+# Go to pacman config
+function mod_pacman_config
+	if test $argv
+		sudo $argv /etc/pacman.conf
+	else
+		obgl sudo subl /etc/pacman.conf
+	end
+end
+
 # Open app in backgroud without printing any logs to terminal
 function obg
 	echo "$argv &> /dev/null&"
