@@ -71,26 +71,27 @@ end
 
 # Create working files and open them in VSCode
 function work_start
-	cd ~/'Рабочий стол/'
+	cd ~/Desktop/
 	mkdir work
 	cd work/
 	touch PythonSource.py
 	touch CppSource.cpp
-	subl .
-	cd ~/
+	cd ..
+	subl work
+	cd
 end
 
 # Delete all work files created in 'work_start'
 function work_done
-	cd ~/'Рабочий стол/'
+	cd ~/Desktop/
 	rm -rf work
-	cd ~/
+	cd
 	pkill subl
 end
 
 # cd to work directory created in 'work_start'
 function go_work
-	cd ~/'Рабочий стол/'work/
+	cd ~/Desktop/work/
 end
 
 # Open MW-Insider project located in ~/Work/
