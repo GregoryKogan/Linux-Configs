@@ -24,6 +24,7 @@ lxappearance-gtk3
 pavucontrol
 dmenu
 gparted
+lxsession-gtk3
 """
 
 

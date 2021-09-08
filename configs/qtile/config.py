@@ -166,6 +166,7 @@ def autostart():
     processes = [
         ['blueman-applet'],
         ['nm-applet'],
+        ['lxsession']
     ]
 
     for p in processes:
