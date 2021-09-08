@@ -22,4 +22,9 @@ echo "Configuring Alacritty"
 sudo cp "$curpath/configs/alacritty.yml" ~/.config/alacritty
 
 
+# Qtile
+echo "Configuring Qtile"
+sudo cp -r "$curpath/configs/qtile" ~/.config/qtile
+
+
 sudo rm curpath.txt;
