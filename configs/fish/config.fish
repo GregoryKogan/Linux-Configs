@@ -33,45 +33,45 @@ alias gm="git merge"
 # Go to Fish shell (this) config
 function mod_fish_config
 	if test $argv
-		sudo $argv ~/.config/fish/config.fish
+		$argv ~/.config/fish/config.fish
 	else
-		obgl sudo subl ~/.config/fish/config.fish
+		obgl subl ~/.config/fish/config.fish
 	end
 end
 
 # Go to Starship prompt config
 function mod_starship_config
 	if test $argv
-		sudo $argv ~/.config/starship.toml
+		$argv ~/.config/starship.toml
 	else
-		obgl sudo subl ~/.config/starship.toml
+		obgl subl ~/.config/starship.toml
 	end
 end
 
 # Go to Alacritty terminal emulator config
 function mod_alacritty_config
 	if test $argv
-		sudo $argv ~/.config/alacritty/alacritty.yml
+		$argv ~/.config/alacritty/alacritty.yml
 	else
-		obgl sudo subl ~/.config/alacritty/alacritty.yml
+		obgl subl ~/.config/alacritty/alacritty.yml
 	end
 end
 
 # Go to Qtile wm config
 function mod_qtile_config
 	if test $argv
-		sudo $argv ~/.config/qtile/config.py
+		$argv ~/.config/qtile/config.py
 	else
-		obgl sudo subl ~/.config/qtile/config.py
+		obgl subl ~/.config/qtile/config.py
 	end
 end
 
 # Go to pacman config
 function mod_pacman_config
 	if test $argv
-		sudo $argv /etc/pacman.conf
+		$argv /etc/pacman.conf
 	else
-		obgl sudo subl /etc/pacman.conf
+		obgl subl /etc/pacman.conf
 	end
 end
 

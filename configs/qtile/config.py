@@ -8,6 +8,7 @@ import os
 import subprocess
 from libqtile import hook
 from libqtile import qtile
+import arcobattery
 
 
 COLOR_PALETTES = {
@@ -93,6 +94,7 @@ widget_defaults = {
 }
 extension_defaults = widget_defaults.copy()
 
+home = os.path.expanduser('~')
 
 mod = "mod4"  # mod key = super
 ALT = "mod1"
@@ -272,7 +274,7 @@ panel_widgets = [
         font="Monospace Bold",
     ),
     widget.TextBox(
-        text='🪟',
+        text='🗔',
         fontsize='20',
     ),
     widget.CurrentLayout(font="Monospace Bold", fontsize=15),
@@ -403,7 +405,12 @@ panel_widgets = [
        foreground=ui_theme['even_color'],
        **ui_theme['left_arrow'],
     ),
-    widget.BatteryIcon(
+    arcobattery.BatteryIcon(
+        padding=0,
+        scale=0.7,
+        y_poss=2,
+        theme_path=f"{home}/.config/qtile/icons/battery_icons_horiz",
+        update_interval=5,
         background=ui_theme['even_color'],
     ),
     widget.Battery(
