@@ -11,15 +11,17 @@ echo "$curpath";
 # Fish
 echo "Configuring Fish"
 sudo mkdir ~/.config/fish
-sudo cp "$curpath/configs/config.fish" ~/.config/fish
+sudo mkdir ~/.config/fish/conf.d
+sudo cp "$curpath/configs/fish/config.fish" ~/.config/fish
+sudo cp "$curpath/configs/fish/theme.fish" ~/.config/fish/conf.d
 
 # Starship
 echo "Configuring Starship"
-sudo cp "$curpath/configs/starship.toml" ~/.config
+sudo cp "$curpath/configs/starship/starship.toml" ~/.config
 
 # Alacritty
 echo "Configuring Alacritty"
-sudo cp "$curpath/configs/alacritty.yml" ~/.config/alacritty
+sudo cp "$curpath/configs/alacritty/alacritty.yml" ~/.config/alacritty
 
 # Qtile
 echo "Configuring Qtile"
@@ -27,7 +29,7 @@ sudo cp -r "$curpath/configs/qtile" ~/.config/
 
 # Xournal++
 echo "Configuring Xournal++"
-sudo cp -r "$curpath/configs/toolbar.ini" ~/.config/xournalpp
+sudo cp -r "$curpath/configs/xournalpp/toolbar.ini" ~/.config/xournalpp
 
 
 sudo rm curpath.txt;

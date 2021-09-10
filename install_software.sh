@@ -1,50 +1,35 @@
-APPS="""
-alacritty
-cmatrix
-code
-discord
-firefox
-fish
-git
-htop
-inetutils
-man-pages
-nano
-sublime-text
-telegram-desktop
-wget
-xournalpp
-yay
-blueman
-pulsemixer
-pcmanfm-gtk3
-snapd
-feh
-lxappearance-gtk3
-pavucontrol
-dmenu
-gparted
-lxsession-gtk3
-"""
+install_packages(){
+	echo "##==##==##==UPDATING PACKAGES==##==##==##"
+	sudo pacman -Syu;
 
+	echo "##==##==##==INSTALLING PACMAN PACKAGES==##==##==##"
+	local packages=''
 
-sudo pacman -Syu
-sudo pacman -S $APPS --noconfirm
+	# Apps
+	packages+=' alacritty code discord firefox sublime-text-4 telegram-desktop xournalpp'
 
+	# Utilities
+	packages+=' cmatrix fish git htop inetutils man-pages nano wget yay blueman pulsemixer'
+	packages+=' pcmanfm-gtk3 snapd feh lxappearance-gtk3 pavucontrol dmenu gparted lxsession-gtk3'
 
-# Colorscripts
-git clone https://gitlab.com/dwt1/shell-color-scripts.git
-cd shell-color-scripts
-makepkg -cf
-sudo pacman -U *.pkg.tar.zst
-yay -S shell-color-scripts
-cd ..
-rm -rf shell-color-scripts
+	echo "These packages are going to be installed:"
+	echo "$packages"
 
-# Sublime text
-curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
-echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
-sudo pacman -Syu sublime-text
+	sudo pacman -Sy $packages;
 
-# Backlight control
-yay -S backlight_control
+	echo "##==##==##==INSTALLING AUR PACKAGES==##==##==##"
+	# Backlight control
+	yay -S backlight_control;
+
+	echo echo "##==##==##==INSTALLING OTHER SOFTWARE==##==##==##"
+	# Colorscripts
+	git clone https://gitlab.com/dwt1/shell-color-scripts.git
+	cd shell-color-scripts
+	makepkg -cf
+	pacman -U *.pkg.tar.zst
+	yay -S shell-color-scripts
+	cd ..
+	rm -rf shell-color-scripts
+}
+
+install_packages
