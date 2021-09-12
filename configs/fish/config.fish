@@ -111,23 +111,3 @@ end
 function go_work
 	cd ~/Desktop/work/
 end
-
-# Open MW-Insider project located in ~/Work/
-function mw_start
-	cd ~/Work/MW-Insider/Backend;
-	obg pycharm .
-	cd ../mobile_app;
-	obg android-studio .
-	cd ..
-	clear
-	git status
-end
-
-# Close MW-Insider project located in ~/Work/
-function mw_done
-	cd ~/Work/MW-Insider/;
-	git add .;
-	pkill java;
-	cd;
-	clear;
-end

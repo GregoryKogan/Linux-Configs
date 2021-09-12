@@ -415,10 +415,10 @@ panel_widgets = [
     ),
     widget.Battery(
         format='{char} {percent:2.0%}',
-        discharge_char='▼',
+        discharge_char='',
         charge_char='',
-        empty_char='∅',
-        full_char='F',
+        empty_char='',
+        full_char='',
         low_percentage=0.15,
         low_foreground='FF0000',
         background=ui_theme['even_color'],
