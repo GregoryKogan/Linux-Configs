@@ -106,6 +106,21 @@ icon_folder = '~/.config/qtile/icons'
 wlan_interface = 'wlp2s0'
 backlight_name = 'intel_backlight'
 wallpaper_folder = '~/Pictures/Wallpapers/'
+run_launcher = 'rofi -show drun'
+
+
+### Custom functions ###
+def open_run_launcher():
+    qtile.cmd_spawn(run_launcher)
+
+def open_wifi():
+    qtile.cmd_spawn(f'{terminal} -e sudo nmtui')
+
+def open_pavu():
+    qtile.cmd_spawn('pavucontrol')
+
+def open_pacman():
+    qtile.cmd_spawn(f'{terminal} -e sudo pacman -Syu')
 
 
 keys = [
@@ -113,6 +128,7 @@ keys = [
     Key([mod], "t", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
     Key([mod], "e", lazy.spawn(file_manager), desc="Launch file manager"),
+    Key([mod], "r", lazy.spawn(run_launcher), desc="Launch run launcher"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
 
     # Qtile keybindings
@@ -157,9 +173,6 @@ keys = [
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"),
-
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
 ]
 
 # Executed on startup
@@ -236,27 +249,13 @@ layouts = [
 ]
 
 
-### Custom functions ###
-def open_dmenu():
-    qtile.cmd_spawn('dmenu_run')
-
-def open_wifi():
-    qtile.cmd_spawn(f'{terminal} -e sudo nmtui')
-
-def open_pavu():
-    qtile.cmd_spawn('pavucontrol')
-
-def open_pacman():
-    qtile.cmd_spawn(f'{terminal} -e sudo pacman -Syu')
-
-
 panel_widgets = [
     # 'Start' icon
     widget.Image(
         filename=f'{icon_folder}/arcolinux.png',
         margin_x=7,
         margin_y=2,
-        mouse_callbacks = {"Button1": open_dmenu},
+        mouse_callbacks = {"Button1": open_run_launcher},
     ),
 
     # Workspaces
@@ -283,12 +282,6 @@ panel_widgets = [
         linewidth = 0,
         padding = 15,
         background=ui_theme['background'],
-    ),
-
-    # Run prompt
-    widget.Prompt(
-        prompt='Run: ',
-        **ui_theme['widget'],
     ),
 
     widget.Spacer(),

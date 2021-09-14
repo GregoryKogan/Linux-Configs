@@ -9,7 +9,7 @@ install_packages(){
 	packages+=' alacritty code discord firefox sublime-text-4 telegram-desktop xournalpp'
 
 	# Utilities
-	packages+=' cmatrix fish git htop inetutils man-pages nano wget yay blueman pulsemixer'
+	packages+=' cmatrix fish git htop inetutils man-pages nano wget rofi yay blueman pulsemixer'
 	packages+=' pcmanfm-gtk3 snapd feh lxappearance-gtk3 pavucontrol dmenu gparted lxsession-gtk3'
 
 	echo "These packages are going to be installed:"

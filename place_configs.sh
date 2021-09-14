@@ -31,5 +31,8 @@ sudo cp -r "$curpath/configs/qtile" ~/.config/
 echo "Configuring Xournal++"
 sudo cp -r "$curpath/configs/xournalpp/toolbar.ini" ~/.config/xournalpp
 
+# Rofi
+echo "Configuring Rofi"
+sudo cp -r "$curpath/configs/rofi" ~/.config/
 
 sudo rm curpath.txt;
