@@ -37,4 +37,9 @@ sudo cp -r "$curpath/configs/xournalpp/toolbar.ini" ~/.config/xournalpp
 echo "Configuring Rofi"
 sudo cp -r "$curpath/configs/rofi" ~/.config/
 
+echo "Placing images"
+sudo mkdir ~/Pictures/Wallpapers
+sudo cp "$curpath/images/AnimeGirls.jpg" ~/Pictures
+sudo cp "$curpath/images/Wallpapers/dracula.png" ~/Pictures/Wallpapers
+
 sudo rm curpath.txt;
