@@ -21,6 +21,7 @@ sudo cp "$curpath/configs/starship/starship.toml" ~/.config
 
 # Alacritty
 echo "Configuring Alacritty"
+sudo mkdir ~/.config/alacritty
 sudo cp "$curpath/configs/alacritty/alacritty.yml" ~/.config/alacritty
 
 # Qtile
@@ -29,6 +30,7 @@ sudo cp -r "$curpath/configs/qtile" ~/.config/
 
 # Xournal++
 echo "Configuring Xournal++"
+sudo mkdir ~/.config/xournalpp
 sudo cp -r "$curpath/configs/xournalpp/toolbar.ini" ~/.config/xournalpp
 
 # Rofi

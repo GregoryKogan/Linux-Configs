@@ -4,19 +4,19 @@
 # =======================================
 
 
-format = """$character$cmd_duration$username$directory $git_branch $python
-[❱](bold red)[❱](bold green)[❱](bold blue) 
+format = """$cmd_duration $username $directory $git_branch $python
+$character
 """
 
 add_newline = false
 
 [character]
-error_symbol = "❌ "
-success_symbol = ""
+error_symbol = "[❱](bold red)[❱](bold red)[❱](bold red)"
+success_symbol = "[❱](bold red)[❱](bold green)[❱](bold blue)"
 
 [cmd_duration]
 min_time = 5_000
-format = "took [$duration]($style) "
+format = "took [$duration]($style)"
 
 [directory]
 format = "[$path]($style)"
@@ -25,12 +25,12 @@ truncation_symbol = "../"
 
 [git_branch]
 format = "on [$symbol$branch]($style)"
-symbol = "🌿"
+symbol = "🌿 "
 style = "bold yellow"
 
 [python]
 format = "[$symbol$version]($style)"
-symbol = "🐍"
+symbol = "🐍 "
 style = "bold green"
 
 [username]
