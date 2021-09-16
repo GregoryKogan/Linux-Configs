@@ -33,6 +33,9 @@ sudo pacman -S --needed --noconfirm lxsession-gtk3
 echo "##==##==##==INSTALLING AUR PACKAGES==##==##==##"
 yay -S backlight_control;
 
+echo "##==##==##==INSTALLING SNAP PACKAGES==##==##==##"
+sudo snap install snap-store
+
 echo echo "##==##==##==INSTALLING OTHER SOFTWARE==##==##==##"
 # Colorscripts
 git clone https://gitlab.com/dwt1/shell-color-scripts.git
