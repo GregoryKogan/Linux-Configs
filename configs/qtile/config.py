@@ -269,14 +269,14 @@ panel_widgets = [
     
     # Window layout
     widget.WindowCount(
-        fontsize=16,
-        font="Monospace Bold",
+        fontsize=18,
+        font="Ubuntu Mono Bold",
     ),
     widget.TextBox(
         text='🗔',
         fontsize='20',
     ),
-    widget.CurrentLayout(font="Monospace Bold", fontsize=15),
+    widget.CurrentLayout(font="Ubuntu Mono Bold", fontsize=18),
 
     widget.Sep(
         linewidth = 0,
@@ -306,6 +306,7 @@ panel_widgets = [
         background=ui_theme['odd_color'],
     ),
     widget.CheckUpdates(
+        distro='Arch',
         no_update_string='N/A Updates',
         mouse_callbacks = {"Button1": open_pacman},
         background=ui_theme['odd_color'],
