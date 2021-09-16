@@ -211,6 +211,7 @@ layouts = [
         margin=4,
         grow_amount=5,
         single_border_width=0,
+        single_margin=0,
     ),
     layout.Max(
         border_focus_stack=ui_theme['border_focus'],
