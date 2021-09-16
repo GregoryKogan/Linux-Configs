@@ -25,12 +25,12 @@ truncation_symbol = "../"
 
 [git_branch]
 format = "on [$symbol$branch]($style)"
-symbol = "🌿 "
+symbol = "🌿"
 style = "bold yellow"
 
 [python]
 format = "[$symbol$version]($style)"
-symbol = "🐍 "
+symbol = "🐍"
 style = "bold green"
 
 [username]
