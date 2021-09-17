@@ -29,6 +29,7 @@ sudo pacman -S --needed --noconfirm pavucontrol
 sudo pacman -S --needed --noconfirm dmenu
 sudo pacman -S --needed --noconfirm gparted
 sudo pacman -S --needed --noconfirm lxsession-gtk3
+sudo pacman -S --needed --noconfirm pamac
 
 echo "##==##==##==INSTALLING AUR PACKAGES==##==##==##"
 yay -S backlight_control;
