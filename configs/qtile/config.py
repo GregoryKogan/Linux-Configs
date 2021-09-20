@@ -295,22 +295,19 @@ panel_widgets = [
 
     widget.Spacer(),
 
-    # Updates
+    # Wallpapers
     widget.TextBox(
        text='',
        foreground=ui_theme['odd_color'],
        **ui_theme['left_arrow'],
     ),
-    widget.TextBox(
-        text='⟳',
-        fontsize='23',
+    widget.Wallpaper(
+        directory=wallpaper_folder,
+        random_selection=False,
         background=ui_theme['odd_color'],
-    ),
-    widget.CheckUpdates(
-        distro='Arch',
-        no_update_string='N/A Updates',
-        mouse_callbacks = {"Button1": open_pacman},
-        background=ui_theme['odd_color'],
+        label='⚘',
+        fontsize='20',
+        option='fill',
     ),
 
     # Volume
@@ -413,7 +410,7 @@ panel_widgets = [
         discharge_char='',
         charge_char='',
         empty_char='',
-        full_char='',
+        full_char='F',
         low_percentage=0.15,
         low_foreground='FF0000',
         background=ui_theme['even_color'],
@@ -424,13 +421,6 @@ panel_widgets = [
         linewidth = 0,
         padding = 6,
         background=ui_theme['even_color'],
-    ),
-
-    ### Invisible widgets ###
-    widget.Wallpaper(
-        directory=wallpaper_folder,
-        random_selection=True,
-        label='',
     ),
 ]
 

@@ -33,4 +33,8 @@ sudo cp ~/.config/xournalpp/toolbar.ini "$curpath/configs/xournalpp"
 echo "Collecting Rofi config"
 sudo cp -r ~/.config/rofi "$curpath/configs"
 
+# Images
+echo "Collecting images"
+sudo cp -a ~/Pictures/. "$curpath/images/"
+
 sudo rm curpath.txt;
