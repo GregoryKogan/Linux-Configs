@@ -32,6 +32,9 @@ sudo pacman -S --needed --noconfirm neofetch
 sudo pacman -S --needed --noconfirm xorg-xrandr
 sudo pacman -S --needed --noconfirm python-pip
 
+echo "##==##==##==INSTALLING PYTHON LIBS==##==##==##"
+pip3 install -r python-requirements.txt
+
 echo "##==##==##==INSTALLING YAY==##==##==##"
 pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
