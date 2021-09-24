@@ -30,6 +30,7 @@ sudo pacman -S --needed --noconfirm lxsession-gtk3
 sudo pacman -S --needed --noconfirm pamac
 sudo pacman -S --needed --noconfirm neofetch
 sudo pacman -S --needed --noconfirm xorg-xrandr
+sudo pacman -S --needed --noconfirm python-pip
 
 echo "##==##==##==INSTALLING YAY==##==##==##"
 pacman -S --needed git base-devel
