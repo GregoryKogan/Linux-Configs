@@ -18,11 +18,9 @@ sudo pacman -S --needed --noconfirm man-pages
 sudo pacman -S --needed --noconfirm nano
 sudo pacman -S --needed --noconfirm wget
 sudo pacman -S --needed --noconfirm rofi
-sudo pacman -S --needed --noconfirm yay
 sudo pacman -S --needed --noconfirm blueman
 sudo pacman -S --needed --noconfirm pulsemixer
 sudo pacman -S --needed --noconfirm pcmanfm-gtk3
-sudo pacman -S --needed --noconfirm snapd
 sudo pacman -S --needed --noconfirm feh
 sudo pacman -S --needed --noconfirm lxappearance-gtk3
 sudo pacman -S --needed --noconfirm pavucontrol
@@ -31,8 +29,17 @@ sudo pacman -S --needed --noconfirm gparted
 sudo pacman -S --needed --noconfirm lxsession-gtk3
 sudo pacman -S --needed --noconfirm pamac
 
+echo "##==##==##==INSTALLING YAY==##==##==##"
+pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+rm -rf yay
+
 echo "##==##==##==INSTALLING AUR PACKAGES==##==##==##"
 yay -S backlight_control;
+yay -S snapd;
 
 echo "##==##==##==INSTALLING SNAP PACKAGES==##==##==##"
 sudo snap install snap-store
@@ -46,3 +53,6 @@ pacman -U *.pkg.tar.zst
 yay -S shell-color-scripts
 cd ..
 rm -rf shell-color-scripts
+
+# Starship
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"

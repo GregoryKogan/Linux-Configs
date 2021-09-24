@@ -253,9 +253,9 @@ layouts = [
 panel_widgets = [
     # 'Start' icon
     widget.Image(
-        filename=f'{icon_folder}/arcolinux.png',
-        margin_x=7,
-        margin_y=2,
+        filename=f'{icon_folder}/archlinux.png',
+        margin_x=5,
+        margin_y=3,
         mouse_callbacks = {"Button1": open_run_launcher},
     ),
 
@@ -364,6 +364,7 @@ panel_widgets = [
     ),
     widget.Wlan(
         interface=wlan_interface,
+        format='{essid} {percent:2.0%}',
         mouse_callbacks = {"Button1": open_wifi},
         background=ui_theme['even_color'],
     ),
