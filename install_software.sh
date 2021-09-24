@@ -28,6 +28,7 @@ sudo pacman -S --needed --noconfirm dmenu
 sudo pacman -S --needed --noconfirm gparted
 sudo pacman -S --needed --noconfirm lxsession-gtk3
 sudo pacman -S --needed --noconfirm pamac
+sudo pacman -S --needed --noconfirm neofetch
 
 echo "##==##==##==INSTALLING YAY==##==##==##"
 pacman -S --needed git base-devel
