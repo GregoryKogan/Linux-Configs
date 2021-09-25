@@ -14,6 +14,7 @@ sudo mkdir ~/.config/fish
 sudo mkdir ~/.config/fish/conf.d
 sudo cp "$curpath/configs/fish/config.fish" ~/.config/fish
 sudo cp "$curpath/configs/fish/theme.fish" ~/.config/fish/conf.d
+sudo chown gregorykogan:gregorykogan -R /home/gregorykogan
 
 # Starship
 echo "Configuring Starship"
