@@ -48,7 +48,7 @@ UI_THEMES = {
             'padding': 4,
         },
         'groupbox': {
-            'font': 'Ubuntu Mono Bold',
+            'font': 'Monospace Bold',
             'fontsize': 14,
             'background': COLOR_PALETTES['Dracula']['background'],
             'foreground': COLOR_PALETTES['Dracula']['foreground'],
@@ -56,7 +56,7 @@ UI_THEMES = {
             'margin_y': 5,
             'margin_x': 0,
             'padding_y': 0,
-            'padding_x': 5,
+            'padding_x': 7,
             'active': COLOR_PALETTES['Dracula']['pink'],
             'inactive': COLOR_PALETTES['Dracula']['comment'],
             'rounded': False,
