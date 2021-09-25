@@ -79,7 +79,7 @@ sudo pacman -S --needed --noconfirm noto-fonts
 sudo pacman -S --needed --noconfirm terminus-font
 
 echo "##==##==##==INSTALLING PYTHON LIBS==##==##==##"
-pip3 install -r python-requirements.txt
+pip3 install iwlib
 
 echo "##==##==##==INSTALLING YAY==##==##==##"
 pacman -S --needed git base-devel
