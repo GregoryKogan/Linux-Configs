@@ -90,8 +90,9 @@ cd ..
 rm -rf yay
 
 echo "##==##==##==INSTALLING AUR PACKAGES==##==##==##"
-yay -S backlight_control;
-yay -S snapd;
+yay -S backlight_control
+yay -S snapd
+yay -S bibata-cursor-theme
 yay
 
 echo "##==##==##==CONFIGURING SNAP==##==##==##"
@@ -118,3 +119,21 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
 echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
 sudo pacman -Syu sublime-text
+
+# Gtk Dracula
+git clone https://github.com/dracula/gtk.git
+sudo mkdir ~/.themes
+cd
+sudo cp -r Linux-Configs/gtk/ ~/.themes
+rm -rf Linux-Configs/gtk
+cd Linux-Configs/
+
+# Icons Dracula
+wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
+unzip Dracula.zip
+rm Dracula.zip
+cd
+sudo mkdir ~/.icons
+sudo cp -r Linux-Configs/Dracula/ ~/.icons/
+rm -rf Linux-Configs/Dracula/
+cd Linux-Configs/
