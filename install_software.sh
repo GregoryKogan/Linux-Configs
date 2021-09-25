@@ -31,6 +31,7 @@ sudo pacman -S --needed --noconfirm neofetch
 sudo pacman -S --needed --noconfirm xorg-xrandr
 sudo pacman -S --needed --noconfirm python-pip
 sudo pacman -S --needed --noconfirm unzip
+sudo pacman -S --needed --noconfirm xfce4-screenshooter
 
 echo "##==##==##==INSTALLING FONTS==##==##==##"
 sudo pacman -S --needed --noconfirm ttf-anonymous-pro

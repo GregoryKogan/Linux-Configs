@@ -107,6 +107,7 @@ wlan_interface = 'wlp2s0'
 backlight_name = 'intel_backlight'
 wallpaper_folder = '~/Pictures/Wallpapers/'
 run_launcher = 'rofi -show drun'
+screenshot_app = 'xfce4-screenshooter'
 
 
 ### Custom functions ###
@@ -147,6 +148,9 @@ keys = [
     # Screen brightness
     Key([], "XF86MonBrightnessDown", lazy.spawn("backlight_control -5")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("backlight_control +5")),
+
+    # Screenshot
+    Key([], "F11", lazy.spawn(screenshot_app)),
 
     # Window management
     Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
