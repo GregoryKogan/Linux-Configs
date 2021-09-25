@@ -32,6 +32,53 @@ sudo pacman -S --needed --noconfirm neofetch
 sudo pacman -S --needed --noconfirm xorg-xrandr
 sudo pacman -S --needed --noconfirm python-pip
 
+echo "##==##==##==INSTALLING FONTS==##==##==##"
+sudo pacman -S --needed --noconfirm ttf-anonymous-pro
+sudo pacman -S --needed --noconfirm ttf-bitstream-vera
+sudo pacman -S --needed --noconfirm ttf-caladea
+sudo pacman -S --needed --noconfirm ttf-carlito
+sudo pacman -S --needed --noconfirm ttf-cascadia-code
+sudo pacman -S --needed --noconfirm ttf-cormorant
+sudo pacman -S --needed --noconfirm ttf-croscore
+sudo pacman -S --needed --noconfirm ttf-dejavu
+sudo pacman -S --needed --noconfirm ttf-droid
+sudo pacman -S --needed --noconfirm ttf-eurof
+sudo pacman -S --needed --noconfirm ttf-fantasque-sans-mono
+sudo pacman -S --needed --noconfirm ttf-fira-code
+sudo pacman -S --needed --noconfirm ttf-fira-mono
+sudo pacman -S --needed --noconfirm ttf-fira-sans
+sudo pacman -S --needed --noconfirm ttf-font-awesome
+sudo pacman -S --needed --noconfirm ttf-hack
+sudo pacman -S --needed --noconfirm ttf-hactor
+sudo pacman -S --needed --noconfirm ttf-hellvetica
+sudo pacman -S --needed --noconfirm ttf-ibm-plex
+sudo pacman -S --needed --noconfirm ttf-inconsolata
+sudo pacman -S --needed --noconfirm ttf-jetbrains-mono
+sudo pacman -S --needed --noconfirm ttf-joypixels
+sudo pacman -S --needed --noconfirm ttf-lato
+sudo pacman -S --needed --noconfirm ttf-liberation
+sudo pacman -S --needed --noconfirm ttf-linux-libertine
+sudo pacman -S --needed --noconfirm ttf-linux-libertine-g
+sudo pacman -S --needed --noconfirm ttf-meslo-nerd-font-powerlevel10k
+sudo pacman -S --needed --noconfirm ttf-monofur
+sudo pacman -S --needed --noconfirm ttf-ms-fonts
+sudo pacman -S --needed --noconfirm ttf-nerd-fonts-symbols-mono
+sudo pacman -S --needed --noconfirm ttf-proggy-clean
+sudo pacman -S --needed --noconfirm ttf-roboto
+sudo pacman -S --needed --noconfirm ttf-roboto-mono
+sudo pacman -S --needed --noconfirm ttf-ubuntu-font-family
+sudo pacman -S --needed --noconfirm urxvt-resize-font-git
+sudo pacman -S --needed --noconfirm xorg-mkfontscale
+sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts
+sudo pacman -S --needed --noconfirm adobe-source-han-sans-jp-fonts
+sudo pacman -S --needed --noconfirm adobe-source-han-sans-kr-fonts
+sudo pacman -S --needed --noconfirm adobe-source-sans-fonts
+sudo pacman -S --needed --noconfirm awesome-terminal-fonts
+sudo pacman -S --needed --noconfirm font-manager-git
+sudo pacman -S --needed --noconfirm gsfonts
+sudo pacman -S --needed --noconfirm noto-fonts
+sudo pacman -S --needed --noconfirm terminus-font
+
 echo "##==##==##==INSTALLING PYTHON LIBS==##==##==##"
 pip3 install -r python-requirements.txt
 
