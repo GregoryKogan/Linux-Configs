@@ -30,6 +30,7 @@ sudo pacman -S --needed --noconfirm pamac
 sudo pacman -S --needed --noconfirm neofetch
 sudo pacman -S --needed --noconfirm xorg-xrandr
 sudo pacman -S --needed --noconfirm python-pip
+sudo pacman -S --needed --noconfirm unzip
 
 echo "##==##==##==INSTALLING FONTS==##==##==##"
 sudo pacman -S --needed --noconfirm ttf-anonymous-pro
