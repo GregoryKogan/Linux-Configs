@@ -35,12 +35,12 @@ UI_THEMES = {
             'background': COLOR_PALETTES['Dracula']['background'],
         },
         'widget': {
-            'font': 'Ubuntu',
-            'fontsize': 15,
+            'font': 'Ubuntu Mono',
+            'fontsize': 16,
             'foreground': COLOR_PALETTES['Dracula']['foreground'],
         },
         'systray': {
-            'font': 'Ubuntu',
+            'font': 'Ubuntu Mono',
             'fontsize': 13,
             'background': COLOR_PALETTES['Dracula']['background'],
             'foreground': COLOR_PALETTES['Dracula']['foreground'],
@@ -48,7 +48,7 @@ UI_THEMES = {
             'padding': 4,
         },
         'groupbox': {
-            'font': 'Monospace Bold',
+            'font': 'Ubuntu Mono Bold',
             'fontsize': 14,
             'background': COLOR_PALETTES['Dracula']['background'],
             'foreground': COLOR_PALETTES['Dracula']['foreground'],
@@ -56,7 +56,7 @@ UI_THEMES = {
             'margin_y': 5,
             'margin_x': 0,
             'padding_y': 0,
-            'padding_x': 7,
+            'padding_x': 5,
             'active': COLOR_PALETTES['Dracula']['pink'],
             'inactive': COLOR_PALETTES['Dracula']['comment'],
             'rounded': False,
@@ -86,8 +86,8 @@ UI_THEMES = {
 ui_theme = UI_THEMES['Dracula']
 
 widget_defaults = {
-    'font': 'Ubuntu',
-    'fontsize': 14,
+    'font': 'Ubuntu Mono',
+    'fontsize': 16,
     'foreground': COLOR_PALETTES['Dracula']['foreground'],
     'background': COLOR_PALETTES['Dracula']['background'],
     'padding': 3,
@@ -275,6 +275,7 @@ panel_widgets = [
     ),
     widget.TextBox(
         text='🗔',
+        font='Ubuntu Mono',
         fontsize='20',
     ),
     widget.CurrentLayout(font="Ubuntu Mono Bold", fontsize=18),
@@ -306,6 +307,7 @@ panel_widgets = [
         random_selection=False,
         background=ui_theme['odd_color'],
         label='⚘',
+        font='Ubuntu Mono',
         fontsize='20',
         option='fill',
     ),
@@ -319,6 +321,7 @@ panel_widgets = [
     ),
     widget.PulseVolume(
         emoji=True,
+        font='Ubuntu Mono',
         volume_app=volume_app,
         limit_max_volume=True,
         mute_command='pulsemixer --toggle-mute',
@@ -342,11 +345,13 @@ panel_widgets = [
     widget.TextBox(
         text='⌨',
         fontsize='18',
+        font='Ubuntu Mono',
         background=ui_theme['odd_color'],
     ),
     widget.KeyboardLayout(
         configured_keyboards=['us', 'ru'],
-        font='Monospace',
+        font='Ubuntu Mono',
+        fontsize='16',
         background=ui_theme['odd_color'],
     ),
 
@@ -360,6 +365,7 @@ panel_widgets = [
     widget.TextBox(
         text='📡',
         fontsize='18',
+        font='Ubuntu',
         background=ui_theme['even_color'],
     ),
     widget.Wlan(
@@ -383,6 +389,7 @@ panel_widgets = [
     ),
     widget.TextBox(
         text='🔆',
+        font='Ubuntu Mono',
         fontsize='18',
         background=ui_theme['odd_color'],
     ),
@@ -407,7 +414,7 @@ panel_widgets = [
         background=ui_theme['even_color'],
     ),
     widget.Battery(
-        format='{char} {percent:2.0%}',
+        format='{percent:2.0%}',
         discharge_char='',
         charge_char='',
         empty_char='',
