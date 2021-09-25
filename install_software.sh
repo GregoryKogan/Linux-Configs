@@ -46,6 +46,11 @@ rm -rf yay
 echo "##==##==##==INSTALLING AUR PACKAGES==##==##==##"
 yay -S backlight_control;
 yay -S snapd;
+yay
+
+echo "##==##==##==CONFIGURING SNAP==##==##==##"
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
 
 echo "##==##==##==INSTALLING SNAP PACKAGES==##==##==##"
 sudo snap install snap-store
