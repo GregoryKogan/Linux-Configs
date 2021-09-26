@@ -1,0 +1,7 @@
+backlight_control
+bibata-cursor-theme
+libpamac-aur
+pamac-aur
+python-clickgen
+shell-color-scripts
+snapd
