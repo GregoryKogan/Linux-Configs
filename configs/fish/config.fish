@@ -69,9 +69,9 @@ end
 # Go to pacman config
 function mod_pacman_config
 	if test $argv
-		$argv /etc/pacman.conf
+		sudo $argv /etc/pacman.conf
 	else
-		obgl subl /etc/pacman.conf
+		obgl sudo subl /etc/pacman.conf
 	end
 end
 

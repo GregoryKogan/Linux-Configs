@@ -84,7 +84,7 @@ echo "##==##==##==INSTALLING PYTHON LIBS==##==##==##"
 pip3 install iwlib
 
 echo "##==##==##==INSTALLING YAY==##==##==##"
-pacman -S --needed git base-devel
+sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si

@@ -117,9 +117,6 @@ def open_run_launcher():
 def open_wifi():
     qtile.cmd_spawn(f'{terminal} -e sudo nmtui')
 
-def open_pavu():
-    qtile.cmd_spawn('pavucontrol')
-
 def open_pacman():
     qtile.cmd_spawn(f'{terminal} -e sudo pacman -Syu')
 
@@ -331,12 +328,20 @@ panel_widgets = [
         mute_command='pulsemixer --toggle-mute',
         volume_up_command='pulsemixer --change-volume +5',
         volume_down_command='pulsemixer --change-volume -5',
+        get_volume_command='pamixer --get-volume',
         background=ui_theme['even_color'],
         **ui_theme['unicode_icon'],
     ),
-    widget.Volume(
-        mouse_callbacks = {"Button1": open_pavu},
+    widget.PulseVolume(
+        font='Ubuntu Mono',
+        volume_app=volume_app,
+        limit_max_volume=True,
+        mute_command='pulsemixer --toggle-mute',
+        volume_up_command='pulsemixer --change-volume +5',
+        volume_down_command='pulsemixer --change-volume -5',
+        get_volume_command='pamixer --get-volume',
         background=ui_theme['even_color'],
+        update_interval=0.1,
     ),
 
     # Keyboard layout
