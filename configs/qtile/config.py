@@ -182,7 +182,7 @@ def autostart():
     processes = [
         ['blueman-applet'],
         ['nm-applet'],
-        ['lxsession']
+        ['lxsession'],
     ]
 
     for p in processes:
@@ -305,7 +305,7 @@ panel_widgets = [
     ),
     widget.Wallpaper(
         directory=wallpaper_folder,
-        random_selection=False,
+        random_selection=True,
         background=ui_theme['odd_color'],
         label='⚘',
         font='Ubuntu Mono',
