@@ -32,6 +32,7 @@ UI_THEMES = {
     'Dracula': {
         'bar': {
             'size': 30,
+            'margin': [7, 7, 0, 7],
             'background': COLOR_PALETTES['Dracula']['background'],
         },
         'widget': {
@@ -179,14 +180,7 @@ keys = [
 # Executed on startup
 @hook.subscribe.startup_once
 def autostart():
-    processes = [
-        ['blueman-applet'],
-        ['nm-applet'],
-        ['lxsession'],
-    ]
-
-    for p in processes:
-        subprocess.Popen(p)
+    subprocess.call([home + '/.config/qtile/autostart.sh'])
 
 
 group_names = [        
@@ -209,18 +203,17 @@ layouts = [
         border_normal=ui_theme['border_normal'],
         ratio=0.55,
         border_width=2,
-        margin=4,
+        margin=7,
         grow_amount=5,
         single_border_width=0,
-        single_margin=0,
+        single_margin=7,
     ),
-    layout.Max(
-        border_focus_stack=ui_theme['border_focus'],
-        border_focus=ui_theme['border_focus'],
-        border_normal=ui_theme['border_normal'],
-        border_normal_stack=ui_theme['border_normal'],
-        border_width=2,
+    layout.Stack(
+        num_stacks=1, 
+        margin=7,
+        border_width=0,
     ),
+    # layout.Max(),
     # layout.Columns(
     #     border_focus_stack=ui_theme['border_focus'],
     #     border_focus=ui_theme['border_focus'],
@@ -243,7 +236,6 @@ layouts = [
     # layout.MonadWide(),
     # layout.Tile(),
     # layout.VerticalTile(),
-    # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.RatioTile(),
     # layout.TreeTab(),
@@ -252,6 +244,12 @@ layouts = [
 
 
 panel_widgets = [
+    widget.Sep(
+        linewidth = 0,
+        padding = 6,
+        background=ui_theme['background'],
+    ),
+
     # 'Start' icon
     widget.Image(
         filename=f'{icon_folder}/archlinux.png',
@@ -259,6 +257,13 @@ panel_widgets = [
         margin_y=3,
         mouse_callbacks = {"Button1": open_run_launcher},
     ),
+
+    widget.Sep(
+        linewidth = 0,
+        padding = 2,
+        background=ui_theme['background'],
+    ),
+
 
     # Workspaces
     widget.GroupBox(**ui_theme['groupbox']),
@@ -436,7 +441,7 @@ panel_widgets = [
 
     widget.Sep(
         linewidth = 0,
-        padding = 6,
+        padding = 7,
         background=ui_theme['even_color'],
     ),
 ]

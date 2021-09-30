@@ -5,3 +5,4 @@ pamac-aur
 python-clickgen
 shell-color-scripts
 snapd
+picom-jonaburg-git

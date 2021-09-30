@@ -75,6 +75,16 @@ function mod_pacman_config
 	end
 end
 
+# Go to picom config
+function mod_picom_config
+	if test $argv
+		$argv ~/.config/picom/picom.conf
+	else
+		obgl subl ~/.config/picom/picom.conf
+	end
+end
+
+
 # Open app in backgroud without printing any logs to terminal
 function obg
 	echo "$argv &> /dev/null&"

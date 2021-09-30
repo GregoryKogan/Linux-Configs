@@ -25,6 +25,10 @@ sudo cp ~/.config/alacritty/alacritty.yml "$curpath/configs/alacritty"
 echo "Collecting Qtile config"
 sudo cp -r ~/.config/qtile "$curpath/configs"
 
+# Picom
+echo "Collecting Picom config"
+sudo cp ~/.config/picom/picom.conf "$curpath/configs/picom"
+
 # Xournal++
 echo "Collecting Xournal++ config"
 sudo cp ~/.config/xournalpp/toolbar.ini "$curpath/configs/xournalpp"
