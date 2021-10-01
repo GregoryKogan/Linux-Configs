@@ -14,7 +14,9 @@ audiocd-kio
 autoconf
 automake
 awesome-terminal-fonts
+backlight_control
 base
+bibata-cursor-theme
 bison
 blinken
 bluedevil
@@ -22,11 +24,12 @@ blueman
 bluez-utils
 bomber
 bovo
-breeze-gtk
+btop
 cantor
 cervisia
 cmatrix
 code
+cups
 discord
 discover
 dmenu
@@ -45,6 +48,7 @@ filelight
 firefox
 fish
 flex
+gimp
 git
 gparted
 granatier
@@ -201,6 +205,7 @@ okular
 os-prober
 oxygen
 palapeli
+pamac-aur
 pamixer
 parley
 partitionmanager
@@ -208,6 +213,7 @@ patch
 pavucontrol
 pcmanfm-gtk3
 picmi
+picom-tryone-git
 pim-data-exporter
 pim-sieve-editor
 pipewire-pulse
@@ -234,10 +240,13 @@ qtile
 rocs
 rofi
 sddm-kcm
+shell-color-scripts
 signon-kwallet-extension
 skanlite
+snapd
 spectacle
 step
+sublime-text
 sudo
 svgpart
 sweeper
@@ -285,6 +294,7 @@ ttf-proggy-clean
 ttf-roboto
 ttf-roboto-mono
 ttf-ubuntu-font-family
+tty-clock
 umbrello
 unzip
 wget
@@ -324,4 +334,5 @@ xorg-xwininfo
 xorg-xwud
 xournalpp
 yakuake
+yay
 zeroconf-ioslave

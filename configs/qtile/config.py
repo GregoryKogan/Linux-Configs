@@ -33,6 +33,7 @@ UI_THEMES = {
         'bar': {
             'size': 30,
             'margin': [7, 7, 0, 7],
+            # 'margin': [30, 30, 0, 30],
             'background': COLOR_PALETTES['Dracula']['background'],
         },
         'widget': {
@@ -204,6 +205,7 @@ layouts = [
         ratio=0.55,
         border_width=2,
         margin=7,
+        # margin=30,
         grow_amount=5,
         single_border_width=0,
         single_margin=7,
