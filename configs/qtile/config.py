@@ -335,7 +335,7 @@ panel_widgets = [
         mute_command='pulsemixer --toggle-mute',
         volume_up_command='pulsemixer --change-volume +5',
         volume_down_command='pulsemixer --change-volume -5',
-        get_volume_command='pamixer --get-volume',
+        get_volume_command='pulsemixer --get-volume',
         background=ui_theme['even_color'],
         **ui_theme['unicode_icon'],
     ),
