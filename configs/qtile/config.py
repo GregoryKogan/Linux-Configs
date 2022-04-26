@@ -181,7 +181,7 @@ keys = [
 # Executed on startup
 @hook.subscribe.startup_once
 def autostart():
-    subprocess.call([home + '/.config/qtile/autostart.sh'])
+    subprocess.call([f'{home}/.config/qtile/autostart.sh'])
 
 
 group_names = [        
