@@ -30,6 +30,11 @@ alias gm="git merge"
 
 ### Custom functions ###
 
+# Lint python ()
+function pylint
+	autoflake --remove-all-unused-imports --remove-duplicate-keys --remove-unused-variables -ir . && black .
+end
+
 # Go to Fish shell (this) config
 function mod_fish_config
 	if test $argv
@@ -121,3 +126,9 @@ end
 function go_work
 	cd ~/Desktop/work/
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /usr/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+

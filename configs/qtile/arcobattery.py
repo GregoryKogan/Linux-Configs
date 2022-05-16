@@ -89,9 +89,11 @@ class _Battery(base._TextBox):
             with open(path, 'r') as f:
                 return f.read().strip()
         except IOError:
-            return 0 if name == 'current_now' else False
+            if name == 'current_now':
+                return 0
+            return False
         except Exception:
-            self.log.exception(f"Failed to get {name}")
+            self.log.exception("Failed to get %s" % name)
 
     def _get_param(self, name):
         if name in self.filenames and self.filenames[name]:
@@ -199,7 +201,7 @@ class Battery(_Battery):
 
         # Calculate the battery percentage and time left
         if time >= 0:
-            hour = time
+            hour = int(time)
             min = int(time * 60) % 60
         else:
             hour = -1
@@ -271,7 +273,7 @@ class BatteryIcon(_Battery):
             'battery-full-charge',
             'battery-full-charged',
         )])
-        self.icons |= self.custom_icons
+        self.icons.update(self.custom_icons)
 
     def timer_setup(self):
         self.update()
@@ -300,6 +302,8 @@ class BatteryIcon(_Battery):
                 key += '-40'
             elif percent < .6:
                 key += '-50'
+            elif percent < .5:
+                key += '-60'
             elif percent < .8:
                 key += '-70'
             elif percent < .9:
